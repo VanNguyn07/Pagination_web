@@ -1,5 +1,5 @@
 const buttons = document.querySelectorAll('.button');
-const currentPage = 'Pagination_Home.html';
+const currentPage = 'page_four.html';
 
 // Danh sách các trang (bao gồm Home)
 const pages = [
@@ -19,11 +19,12 @@ console.log('CurrentIndex: ', currentIndex);
 
 // Gắn link cho Previous và Next
 const prevBtn = document.querySelector('.btn-pre');
-const nextBtn = document.querySelector('.btn-next');
+const fourBtn = document.querySelector('.btn-four');
 
 console.log('Prev Button: ', prevBtn);
-console.log('Next Button: ', nextBtn);
+console.log('Four Button: ', fourBtn);
 
+if(prevBtn){
 if (currentIndex > 0) {
     const prevPage = pages[currentIndex - 1];
     prevBtn.dataset.page = `../${getFolderName(prevPage)}/${prevPage}`;
@@ -32,15 +33,8 @@ if (currentIndex > 0) {
     prevBtn.disabled = true; // Disable nếu không có trang trước
     console.log('Previous button disabled');
 }
-
-if (currentIndex < pages.length - 1) {
-    const nextPage = pages[currentIndex + 1];
-    nextBtn.dataset.page = `../${getFolderName(nextPage)}/${nextPage}`;
-    console.log('Next Page:', nextBtn.dataset.page);
-} else {
-    nextBtn.disabled = true; // Disable nếu không có trang sau
-    console.log('Next button disabled');
 }
+
 
 // Chức năng click chuyển trang
 buttons.forEach(btn => {

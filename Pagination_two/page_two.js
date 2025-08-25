@@ -1,5 +1,5 @@
 const buttons = document.querySelectorAll('.button');
-const currentPage = 'Pagination_Home.html';
+const currentPage = 'page_two.html';
 
 // Danh sách các trang (bao gồm Home)
 const pages = [

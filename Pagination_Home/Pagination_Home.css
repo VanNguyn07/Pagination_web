@@ -83,19 +83,33 @@ img {
     margin-top: 20px;
 }
 
-.btn {
+.button {
     padding: 10px 20px;
     background-color: #4a90e2;
     color: white;
-    border: none;
+    border: 2 solid black;
     border-radius: 15px;
     cursor: pointer;
     font-size: 16px;
-    /* transition: background-color 0.3s ease; */
+    
 }
-.btn:hover {
+.button:hover {
     background-color: #357ABD;
 }
+
+.button:active {
+    transform: scale(0.95);
+    background-color: chocolate;
+}
+
+.button.active {
+    background-color: #ff4081; /* hồng nổi bật */
+    color: #fff;
+    font-weight: bold;
+    border-radius: 6px;
+    box-shadow: 0 0 8px rgba(255, 64, 129, 0.8);
+}
+
 
 .textPage {
     color: #333;
